@@ -37,7 +37,18 @@ function myPower(x, n) {
 //Question 5
 function getFirstNotRepeating(str) {
   // your code here
-  return "";
+  const array =str.split('');
+  array.sort();
+  console.log(array);
+  let answar =[];
+  for (i=0; i<array.length; i++){
+    if (array[i] !== array[i+1] &&
+     array[i] !== array[i-1] &&
+      answar.length === 0){
+      answar.push(array[i])
+    }
+  }
+  return answar;
 }
 
 //Question 6 (Bonus)
