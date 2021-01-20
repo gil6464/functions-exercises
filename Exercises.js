@@ -19,7 +19,13 @@ function allCombinations(str) {
 //Question 3
 function allCaps(str) {
   // your code here
-  return "";
+    const myArr = str.split(' ');
+    const capsLetters = [];
+    for(i=0; i < myArr.length; i++) {
+      capsLetters.push(myArr[i].charAt(0).toUpperCase()
+      +myArr[i].slice(1));
+    } 
+  return capsLetters.join(' ');
 }
 
 //Question 4
