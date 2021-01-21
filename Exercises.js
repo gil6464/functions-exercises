@@ -31,17 +31,25 @@ function allCaps(str) {
 //Question 4
 function myPower(x, n) {
   // your code here
-  return "";
+  const number = n;
+  if (n === 0) {
+    return 1;
+  } else {
+  for (i=1; i<n; i++) {
+    x *= x;
+  }
+  return x;
+ }
 }
+
 
 //Question 5
 function getFirstNotRepeating(str) {
   // your code here
   const array =str.split('');
   array.sort();
-  console.log(array);
   let answar =[];
-  for (i=0; i<array.length; i++){
+  for (i=0; i<array.length; i++) {
     if (array[i] !== array[i+1] &&
      array[i] !== array[i-1] &&
       answar.length === 0){
