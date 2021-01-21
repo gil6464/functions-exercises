@@ -11,6 +11,12 @@ function myReverse(str) {
 function allCombinations(str) {
   let combinations = [];
   // your code here
+  for(i=0;i<str.length;i++) {
+    for(j=i+1;j<str.length+1;j++) {
+        combinations.push(str.slice(i, j));
+    }
+}
+return combinations;
 
   //
   return combinations;
@@ -48,12 +54,12 @@ function getFirstNotRepeating(str) {
   // your code here
   const array =str.split('');
   array.sort();
-  let answar =[];
+  let answar ="";
   for (i=0; i<array.length; i++) {
     if (array[i] !== array[i+1] &&
      array[i] !== array[i-1] &&
       answar.length === 0){
-      answar.push(array[i])
+      answar = answar +array[i]
     }
   }
   return answar;
